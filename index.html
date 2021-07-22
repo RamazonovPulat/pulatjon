@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+  <title></title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+</head>
+
+<body style="background:#fff;">
+  
+ <div id="loading_page">
+   
+    
+    <div id="myProgress">
+      <div id="myBar">
+        <span style="color:#fff;">loading...</span>
+        <div id="label">
+          10%
+        </div>
+      </div>
+    </div>
+ 
+    <div style="display:flex; justify-content:center; align-items:center;">
+      <img src="images/logo.png" alt="bizning logotipimiz" style="width:50px; height:50px; "><span style="color:#000; align:center;">Python Learn | &copy; 2021</span>
+    </div>
+ 
+ </div>
+
+
+
+  <script>
+
+
+    var elem = document.getElementById
+    ("myBar");
+
+    var width = 10;
+
+    var id = setInterval(frame, 10);
+    function frame() {
+
+      if (width >= 100) {
+        clearInterval(id);
+      } else {
+        width++;
+        elem.style.width = width + '%';
+        document.getElementById("label")
+        .innerHTML = width * 1  + '%';
+
+      }
+    }
+
+    setTimeout(() => {
+
+      window.open("asosiy.html");
+
+    }, 1500);
+
+
+  </script>
+
+</body>
+</html>
